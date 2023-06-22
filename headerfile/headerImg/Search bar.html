@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/header.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search bar</title>
+    
+    <style>
+        .header{
+            display: flex;
+            flex-direction: row;
+            height: 55px;
+            border: 1px solid gray;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .left-content{
+            display: flex;
+            flex-direction: row;
+            width: 150px;
+            align-items: center;
+        }
+
+        .hamburger-menu{
+            width: 20px;
+            margin: 20px;
+        }
+
+        .youtubelogo-menu{
+            width: 100px;
+            margin-left: 10px;
+        }
+
+        
+        .center-content{
+            /* background-color: lightpink; */
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            margin-left: 30px;
+            margin-right: 30px;
+            max-width: 400px;
+            padding: 10px
+        }
+
+        .searchbar-menu{
+            border: 1px solid gray;
+            width: 75%;
+        }
+
+        .search-icon-menu{
+            width: 50px;
+            border: 1px solid gray;
+            background-color: rgb(248, 246, 246);
+        }
+
+        .search-icon-img{
+            width: 21px;
+            margin-left: 15px;
+        }
+
+        .voice-search-menu{
+            width: 25px;
+            margin-left: 10px;
+            padding: 6px;
+            background-color: rgb(244, 244, 244);
+            border-radius: 55%;
+        }
+
+        .right-content{
+            width: 225px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .upload-menu{
+            /* flex: 1; */
+            width: 20px;
+            flex: 1;
+            height: 27px;
+        }
+
+        .youtube-apps-menu{
+            width: 26px;
+            flex: 1;
+            height: 27px;
+        }
+
+        .notifications-menu{
+            width: 20px;
+            flex: 1;
+            height: 27px;
+        }
+
+        .my-channel-menu{
+            flex: 1;
+            height: 27px;
+        }
+
+        .my-channel-img-menu{
+            width: 25px;
+            padding-left: 15px;
+            
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left-content">
+            <div class="hamburger-menu"><img src="./Search bar_files/hamburger-menu.svg" alt=""></div>
+            <div class="youtubelogo-menu"><img src="./Search bar_files/youtube-logo.svg" alt=""></div>
+        </div>
+
+        <div class="center-content">
+            <input class="searchbar-menu" type="text" placeholder="Search">
+            <button class="search-icon-menu"><img class="search-icon-img" src="./Search bar_files/search.svg" alt=""></button>
+            <div class="voice-search-menu"><img src="./Search bar_files/voice-search-icon.svg" alt=""></div>
+        </div>
+
+        <div class="right-content">
+            <div class="upload-menu"><img src="./Search bar_files/upload.svg" alt=""></div>
+            <div class="youtube-apps-menu"><img src="./Search bar_files/youtube-apps.svg" alt=""></div>
+            <div class="notifications-menu"><img src="./Search bar_files/notifications.svg" alt=""></div>
+            <div class="my-channel-menu"><img class="my-channel-img-menu" src="./Search bar_files/my-channel.jpeg" alt=""></div>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
