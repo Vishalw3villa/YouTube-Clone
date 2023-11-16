@@ -156,6 +156,6 @@ button{
 @media screen and (min-width: 500px) {
     .upper-div{
         grid-template-columns: 1fr 1fr 1fr;
-        background-color: red;
+        /* background-color: red; */
     }
 }
